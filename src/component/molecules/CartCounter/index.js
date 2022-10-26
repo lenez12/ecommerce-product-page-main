@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { iconMinus, iconPlus } from "../../../assets/images";
 import "./styles.scss";
 function CartCounter({ onChange }) {
@@ -9,10 +9,12 @@ function CartCounter({ onChange }) {
 	const _decrease = () => {
 		setCounter((counter) => (counter > 0 ? counter - 1 : 0));
 	};
-
-	useEffect(() => {
+	const test = useCallback(() => {
 		onChange && onChange(counter);
-	}, [counter]);
+	}, [onChange, counter]);
+
+	useEffect(test, [counter, test]);
+
 	return (
 		<div className="cart-counter-container">
 			<img

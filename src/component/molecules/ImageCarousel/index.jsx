@@ -68,7 +68,7 @@ function ImageCarousel() {
 			/>
 			<div className="image-page-container">
 				{productImages.map((_, index) => {
-					let isActive = index == imageIndex ? "active" : "";
+					let isActive = index === imageIndex ? "active" : "";
 					return (
 						<div
 							key={_.id.toString()}
