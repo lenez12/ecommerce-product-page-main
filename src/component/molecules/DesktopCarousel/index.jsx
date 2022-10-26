@@ -71,7 +71,7 @@ function DesktopCarousel() {
 		if (activeLightbox.status) {
 			setActiveLightbox({ ...activeLightbox, className: "active" });
 		} else setActiveLightbox({ ...activeLightbox, className: "" });
-	}, [activeLightbox.status]);
+	}, [activeLightbox.status, activeLightbox]);
 
 	return (
 		<div className="desktop-carousel">
@@ -93,7 +93,7 @@ function DesktopCarousel() {
 			</div>
 			<div className="image-page-container">
 				{productImages.map((item, index) => {
-					let isActive = index == imageIndex ? "active" : "";
+					let isActive = index === imageIndex ? "active" : "";
 					return (
 						<img
 							key={item.id.toString()}

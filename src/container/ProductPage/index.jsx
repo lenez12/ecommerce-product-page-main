@@ -11,7 +11,12 @@ import { iconCartWhite } from "../../assets/images";
 function ProductPage({ getItemCount }) {
 	const [count, setCount] = useState(0);
 	let btnLeftIcon = (
-		<img src={iconCartWhite} height={15} style={{ marginRight: 10 }} />
+		<img
+			src={iconCartWhite}
+			alt="icon-left"
+			height={15}
+			style={{ marginRight: 10 }}
+		/>
 	);
 	useEffect(() => {}, [count]);
 	const _onSubmit = () => {
@@ -67,8 +72,5 @@ function ProductPage({ getItemCount }) {
 		</div>
 	);
 }
-function getWindowSize() {
-	const { innerWidth, innerHeight } = window;
-	return { innerWidth, innerHeight };
-}
+
 export default ProductPage;

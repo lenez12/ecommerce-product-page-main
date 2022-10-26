@@ -14,7 +14,7 @@ function OutsideClick(props) {
 			// Unbind the event listener on clean up
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
-	}, [wrapperRef]);
+	}, [wrapperRef, props]);
 
 	return <div ref={wrapperRef}>{props.children}</div>;
 }
