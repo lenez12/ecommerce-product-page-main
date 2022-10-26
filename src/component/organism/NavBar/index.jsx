@@ -27,7 +27,7 @@ function NavBar({ data, setItemCount }) {
 					<div className="nav">
 						<div className="navigation-menu">
 							<div onClick={_toggleMenu} className="toggle-menu"></div>
-							<a href="#">
+							<a href="#home">
 								<img src={iconLogo} alt="logo" className="logo" />
 							</a>
 							<ul className={`nav-menu ${className}`}>
