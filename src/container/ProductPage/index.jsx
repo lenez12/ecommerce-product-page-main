@@ -7,7 +7,6 @@ import {
 	ImageCarousel,
 } from "../../component/molecules";
 import { iconCartWhite } from "../../assets/images";
-import { isMobile, MobileView } from "react-device-detect";
 
 function ProductPage({ getItemCount }) {
 	const [count, setCount] = useState(0);

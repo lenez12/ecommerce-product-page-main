@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-	iconLogo,
-	imgAvatar,
-	iconClose,
-	imgProduct1Thumb,
-} from "../../../assets/images";
+import { iconLogo, imgAvatar, iconClose } from "../../../assets/images";
 import CartComponent from "../CartComponent";
 
 import "./styles.scss";

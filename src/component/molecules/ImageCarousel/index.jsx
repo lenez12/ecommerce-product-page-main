@@ -9,7 +9,7 @@ import {
 } from "../../../assets/images";
 import "./styles.scss";
 
-function ImageCarousel(data) {
+function ImageCarousel() {
 	const [imageIndex, setImageIndex] = useState(0);
 	const productImages = [
 		{

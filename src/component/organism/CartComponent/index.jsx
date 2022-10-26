@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { iconCart } from "../../../assets/images";
 import { Button, OutsideClick } from "../../atoms";
 import CartItem from "../../molecules/CartItem";
-import { faCartFlatbed } from "@fortawesome/free-solid-svg-icons";
 import "./styles.scss";
 
 function CartComponent({ data, setItemCount }) {

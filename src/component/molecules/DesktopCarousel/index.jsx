@@ -15,7 +15,7 @@ import {
 } from "../../../assets/images";
 import "./styles.scss";
 
-function DesktopCarousel(data) {
+function DesktopCarousel() {
 	const [imageIndex, setImageIndex] = useState(0);
 	const [activeLightbox, setActiveLightbox] = useState({
 		className: "",
