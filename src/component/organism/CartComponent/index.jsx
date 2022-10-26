@@ -24,7 +24,7 @@ function CartComponent({ data, setItemCount }) {
 	return (
 		<OutsideClick onClick={() => setToggle(false)}>
 			<div onClick={_toggleCart} className="cart-image">
-				<img src={iconCart} alt="cart-image-icon" />
+				<img src={iconCart} alt="cart-icon" />
 				{data && (
 					<span className="count-badge bounce-in-top">{data.count}</span>
 				)}

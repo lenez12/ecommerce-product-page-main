@@ -100,6 +100,7 @@ function DesktopCarousel() {
 							src={item.thumbnail}
 							onClick={() => __onClickPage(index)}
 							className={`image-page ${isActive}`}
+							alt={item.name}
 						></img>
 					);
 				})}
@@ -144,12 +145,13 @@ function DesktopCarousel() {
 					/>
 					<div className="image-page-container">
 						{productImages.map((item, index) => {
-							let isActive = index == imageIndex ? "active" : "";
+							let isActive = index === imageIndex ? "active" : "";
 							return (
 								<img
 									key={item.id.toString()}
 									src={item.thumbnail}
 									onClick={() => __onClickPage(index)}
+									alt={item.name}
 									className={`image-page ${isActive}`}
 								></img>
 							);
