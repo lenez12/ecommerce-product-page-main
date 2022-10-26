@@ -1,0 +1,67 @@
+@import "../../../scss/variables";
+.carousel {
+	position: relative;
+	overflow: hidden;
+	.inner {
+		display: flex;
+		flex-wrap: nowrap;
+		transition: 0.5s;
+
+		.product-images {
+			object-fit: cover;
+			width: 100%;
+			display: block;
+			flex-shrink: 0;
+		}
+	}
+	.translate {
+		transform: translateX(200%);
+	}
+	.icon {
+		position: absolute;
+		padding: 10px 12px;
+		background-color: $white-color;
+		border-radius: 100%;
+		top: 40%;
+		display: block;
+		height: 35px;
+		z-index: 1;
+
+		&.left {
+			left: 15px;
+		}
+
+		&.right {
+			right: 15px;
+		}
+		&.show {
+			display: block;
+		}
+	}
+
+	.image-page-container {
+		display: flex;
+		justify-content: center;
+
+		position: absolute;
+		bottom: 5%;
+		left: 5%;
+		right: 5%;
+		gap: 10px;
+		.image-page {
+			height: 10px;
+			width: 30px;
+			border-radius: 10px;
+			background-color: rgb(102, 100, 100);
+			opacity: 50%;
+			transition: 1s;
+			&.active {
+				background-color: rgb(47, 47, 47);
+				opacity: 100%;
+			}
+			&:active {
+				transform: scale(1.5);
+			}
+		}
+	}
+}

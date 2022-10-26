@@ -1,0 +1,44 @@
+@import "../../../scss/variables";
+.cart-counter-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $light-grayish-blue;
+	border-radius: 0.5rem;
+	height: 3rem;
+	margin-bottom: 0rem;
+	padding: 0 1rem;
+
+	p {
+		font-weight: $bold-weight;
+		color: black;
+		font-size: 1rem;
+		vertical-align: middle;
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.cart-counter-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $light-grayish-blue;
+		border-radius: 0.5rem;
+		height: 4rem;
+		margin-bottom: 0rem;
+		padding: 0 1rem;
+		width: 50%;
+
+		.btn {
+			cursor: pointer;
+		}
+		p {
+			font-weight: $bold-weight;
+			color: black;
+			font-size: 1.2rem;
+			vertical-align: middle;
+			margin-bottom: 0;
+		}
+	}
+}

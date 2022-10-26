@@ -1,0 +1,64 @@
+@import "../../../scss/variables";
+.container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	position: relative;
+	width: 100%;
+	.thumbnail {
+		height: 50px;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		border-radius: 4px;
+	}
+	.item-detail {
+		.title,
+		.price {
+			font-weight: 400;
+			margin-bottom: 5px;
+			font-size: 1rem;
+			span {
+				font-weight: $bold-weight;
+			}
+		}
+	}
+	.icon-delete {
+		position: absolute;
+		right: 0px;
+		top: 40%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		position: relative;
+		width: 100%;
+		.thumbnail {
+			height: 50px;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			border-radius: 4px;
+		}
+		.item-detail {
+			.title,
+			.price {
+				font-weight: 400;
+				margin-bottom: 5px;
+				font-size: 1.2rem;
+				span {
+					font-weight: $bold-weight;
+				}
+			}
+		}
+		.icon-delete {
+			position: absolute;
+			right: 0px;
+			top: 40%;
+		}
+	}
+}

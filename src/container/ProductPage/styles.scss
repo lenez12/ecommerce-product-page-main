@@ -1,0 +1,140 @@
+@import "../../scss/variables";
+body {
+	font-family: $font-family;
+	font-size: $font-size;
+	min-height: 900px;
+}
+
+.flex {
+	display: flex;
+	gap: 1rem;
+}
+
+.product-page-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	.content {
+		padding: 1.5rem 1.5rem 0;
+		.company {
+			color: lighten($orange-color, 10%);
+			text-transform: uppercase;
+			font-weight: $bold-weight;
+			margin-bottom: 1rem;
+			display: block;
+			font-size: 12px;
+		}
+		.title {
+			font-weight: $bold-weight;
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
+		.description {
+			color: $dark-grayish-blue;
+			font-size: 14px;
+			line-height: 20px;
+			margin-bottom: 1.5rem;
+		}
+
+		.price-tag {
+			display: flex;
+			margin-bottom: 1rem;
+			align-items: center;
+			justify-content: space-between;
+			.discount-price {
+				display: flex;
+				align-items: center;
+				.price {
+					font-size: 1.5rem;
+					font-weight: $bold-weight;
+				}
+				span {
+					padding: 5px;
+					background-color: lighten($orange-color, 35%);
+					margin: 0 10px;
+					border-radius: 4px;
+					font-size: 12px;
+					color: $orange-color;
+					font-weight: bold;
+				}
+			}
+			h3 {
+				color: $grayish-blue;
+				text-decoration: line-through;
+				font-size: 0.8rem;
+				font-weight: $bold-weight;
+			}
+		}
+
+		.cart-action {
+			flex-direction: column;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.product-page-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 3rem;
+		padding-top: 8rem;
+
+		.content {
+			padding: 1.5rem 1.5rem 0;
+			align-self: center;
+			.company {
+				color: lighten($orange-color, 10%);
+				text-transform: uppercase;
+				font-weight: $bold-weight;
+				// letter-spacing: 1px;
+				margin-bottom: 1rem;
+				display: block;
+				font-size: 14px;
+			}
+			.title {
+				font-weight: $bold-weight;
+				font-size: 2.5rem;
+				margin-bottom: 2.5rem;
+			}
+			.description {
+				color: $dark-grayish-blue;
+				font-size: 16px;
+				line-height: 20px;
+				margin-bottom: 1.5rem;
+			}
+
+			.price-tag {
+				display: flex;
+				margin-bottom: 2rem;
+				align-items: flex-start;
+				justify-content: space-between;
+				flex-direction: column;
+				.discount-price {
+					display: flex;
+					align-items: center;
+					margin-bottom: 1rem;
+					.price {
+						font-size: 2rem;
+						font-weight: $bold-weight;
+					}
+					span {
+						padding: 5px;
+						background-color: lighten($color: $orange-color, $amount: 40%);
+						margin: 0 10px;
+						border-radius: 4px;
+						font-size: 16px;
+					}
+				}
+				.real-price {
+					color: $grayish-blue;
+					text-decoration: line-through;
+					font-size: 1rem;
+					font-weight: $bold-weight;
+				}
+			}
+			.cart-action {
+				flex-direction: row;
+				height: 4rem;
+			}
+		}
+	}
+}
